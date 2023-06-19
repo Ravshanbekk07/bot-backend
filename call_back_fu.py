@@ -38,7 +38,7 @@ def secstart(chat_id,first_name):
         'reply_markup': {
             'keyboard': keyboard
         },
-        'replyKeyboardMarkup':True
+        'resize_keyboard':True
     }
     response = requests.post(URL,json=payload)
     return response
