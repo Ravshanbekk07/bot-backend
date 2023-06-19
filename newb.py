@@ -14,7 +14,7 @@ def send_m(chat_id):
     text = update['message']['text']
     number = 0
     disnum = 0
-    while True:
+    for number in range(1,1000):
         if text =='like👍':
             number+=1
               
