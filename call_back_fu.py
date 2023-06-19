@@ -28,8 +28,8 @@ def secstart(chat_id,first_name):
     # chatid = last_update['message']['chat']['id']
     # firstname = last_update['message']['chat']['first_name']
     URL = f'https://api.telegram.org/bot{TOKEN}/sendMessage'
-    btn1 = 'like 👍'
-    btn2 = 'dislike 👎'
+    btn1 = 'like👍'
+    btn2 = 'dislike👎'
     keyboard = [[btn1,btn2]]
     payload = {
         "chat_id":chat_id,
@@ -42,6 +42,17 @@ def secstart(chat_id,first_name):
     }
     response = requests.post(URL,json=payload)
     return response
+# def send_m(chat_id):
+#     URL = f'https://api.telegram.org/bot{TOKEN}/sendMessage'
+   
+#     payload = {
+#         "chat_id":chat_id,
+#         'text':f'like { number},dislike { disnum}',
+        
+        
+#     }
+#     response = requests.post(URL,json=payload)
+#     return response
    
 
 
