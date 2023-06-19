@@ -33,7 +33,7 @@ def secstart(chat_id,first_name):
     keyboard = [[btn1,btn2]]
     payload = {
         "chat_id":chat_id,
-        'text':f'{first_name}ovozingiz biz uchun muhim',
+        'text':f'{first_name } ovozingiz biz uchun muhim',
         
         'reply_markup': {
             'keyboard': keyboard
