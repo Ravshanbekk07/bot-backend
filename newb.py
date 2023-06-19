@@ -14,11 +14,11 @@ def send_m(chat_id):
     text = update['message']['text']
     number = 0
     disnum = 0
-    while number:
+    while True:
         if text =='like👍':
             number+=1
-    while disnum:            
-        if text == 'dislike👎':
+              
+        elif text == 'dislike👎':
             disnum+=1  
 
     payload = {
