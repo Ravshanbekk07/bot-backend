@@ -27,6 +27,5 @@ def webhook_bot():
                 'chat_id': chat_id,
                 'text': text
             }
-        requests.get(
-            f'https://api.telegram.org/bot{TOKEN}/sendMessage', params=payload)
+            requests.get(f'https://api.telegram.org/bot{TOKEN}/sendMessage', params=payload)
     return 'cool'

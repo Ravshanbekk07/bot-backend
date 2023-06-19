@@ -36,9 +36,9 @@ def secstart(chat_id,first_name):
         'text':f'{first_name } ovozingiz biz uchun muhim',
         
         'reply_markup': {
-            'keyboard': keyboard
-        },
+        'keyboard': keyboard,
         'resize_keyboard':True
+        }
     }
     response = requests.post(URL,json=payload)
     return response
