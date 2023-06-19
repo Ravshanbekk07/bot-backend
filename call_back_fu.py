@@ -2,6 +2,7 @@ import requests
 from telegram import (Update)
 from telegram.ext import CallbackContext
 
+TOKEN='6083785294:AAHy_BRexQquv_DEcNRwdSbqCS-AdPHd4Ks'
 
 def start(update: Update, context: CallbackContext) -> None:
   
@@ -19,4 +20,30 @@ def start(update: Update, context: CallbackContext) -> None:
     else:
         update.message.reply_html(text=f"Hello again , <b>{first_name}</b>. siz allaqachon royxatdan otgansiz")
 
-    
+
+def secstart(chat_id,first_name):
+    # updates = response.json()['result']
+    # last_update = updates[-1]
+
+    # chatid = last_update['message']['chat']['id']
+    # firstname = last_update['message']['chat']['first_name']
+    URL = f'https://api.telegram.org/bot{TOKEN}/sendMessage'
+    btn1 = 'like 👍'
+    btn2 = 'dislike 👎'
+    keyboard = [[btn1,btn2]]
+    payload = {
+        "chat_id":chat_id,
+        'text':f'{first_name}ovozingiz biz uchun muhim',
+        
+        'reply_markup': {
+            'keyboard': keyboard
+        },
+        'replyKeyboardMarkup':True
+    }
+    response = requests.post(URL,json=payload)
+    return response
+   
+
+
+
+
