@@ -25,11 +25,9 @@ def send_m(chat_id):
 
     payload = {
         "chat_id":chat_id,
-        'text':f'like {number}\n dislike { disnum}',
-        
-        
-    }
+        'text':f'like {number}\n dislike { disnum}'}
     response = requests.post(URL,json=payload)
+
     return response
 @bot_app.route('/webhook/', methods=['POST', 'GET'])
 def webhook_bot():
