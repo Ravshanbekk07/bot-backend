@@ -17,14 +17,14 @@ def send_m(chat_id):
     disnum = 0
     
     if text =='like👍':
-        number+=1
+        likenum = number+1
               
     elif text == 'dislike👎':
-        disnum+=1  
+        disnumber = disnum+1
 
     payload = {
         "chat_id":chat_id,
-        'text':f'like {number}\n dislike { disnum}',
+        'text':f'like {likenum}\n dislike { disnumber}',
         
         
     }
