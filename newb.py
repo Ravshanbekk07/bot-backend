@@ -8,14 +8,15 @@ bot_app = Flask(__name__)
 
 TOKEN = '6083785294:AAHy_BRexQquv_DEcNRwdSbqCS-AdPHd4Ks'
 
+number = 0
+disnum = 0
 def send_m(chat_id):
     URL = f'https://api.telegram.org/bot{TOKEN}/sendMessage'
     update = request.get_json()
     text = update['message']['text']
    
-    number = 0
-    disnum = 0
-    
+    global number,disnum
+    print(text)
     if text =='like👍':
         number+=1
               
