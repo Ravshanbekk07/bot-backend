@@ -12,18 +12,20 @@ def send_m(chat_id):
     URL = f'https://api.telegram.org/bot{TOKEN}/sendMessage'
     update = request.get_json()
     text = update['message']['text']
+    last = update['message']['text'][-1]
+    print(last)
     number = 0
     disnum = 0
     
     if text =='like👍':
-            number+=1
+        last+=1
               
     elif text == 'dislike👎':
-            disnum+=1  
+            last+=1  
 
     payload = {
         "chat_id":chat_id,
-        'text':f'like {number}\n dislike { disnum}',
+        'text':f'like {last}\n dislike { last}',
         
         
     }
